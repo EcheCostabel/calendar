@@ -16,13 +16,13 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const now = moment().minutes(0).seconds(0).add(1, 'hours');
-const nowPlus1 = now.clone().add(1, 'hours')
+const nowPlus1 = now.clone().add(1, 'hours');
 
 export const CalendarModal = () => {
 
     const [ dateStart, setDateStart ] = useState(now.toDate())
 
-    const [ dateEnd, setDateEnd ] = useState(nowPlus1)
+    const [ dateEnd, setDateEnd ] = useState(nowPlus1.toDate())
 
     // const [ isOpen, setIsOpen ] = useState(true)
  
@@ -65,7 +65,7 @@ export const CalendarModal = () => {
 
         <div className="form-group mb-2">
             <label>Fecha y hora fin</label>
-            <DateTimePicker onChange={handleEndDateChange} value={dateEnd} className='form-control' />
+            <DateTimePicker onChange={handleEndDateChange} value={dateEnd} className='form-control' /> 
 
         </div>
 

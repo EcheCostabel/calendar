@@ -11,4 +11,4 @@ export const uiCloseModal = () => {
     return {
         type: types.uiCloseModal
     }
-}
+};

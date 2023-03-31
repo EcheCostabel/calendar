@@ -49,8 +49,10 @@ export const CalendarModal = () => {
     useEffect(() => {
         if(activeEvent) {
             setFormValues(activeEvent)  //Esto es para cuando hago doble click en un evento me cargue el modal
-        }                               // con los datos de ese mismo evento. 
-    }, [activeEvent, setFormValues])
+        } else {
+            setFormValues(initEvent)
+        }                              // con los datos de ese mismo evento. 
+    }, [activeEvent, setFormValues]);
 
 
     const handleInputChange = (e) => {
@@ -58,7 +60,7 @@ export const CalendarModal = () => {
             ...formValues,
             [e.target.name]: e.target.value
         })
-    }
+    };
  
     const closeModal = () => {
         dispatch(uiCloseModal());
@@ -110,7 +112,7 @@ export const CalendarModal = () => {
                     name: 'Exequiel'
                 }
             }))
-        }
+        };
 
 
         setTitleValid(true);
@@ -129,7 +131,7 @@ export const CalendarModal = () => {
     className='modal'
     overlayClassName='modal-fondo'
   >
-    <h1> Nuevo evento </h1>
+    <h1> {(activeEvent) ? 'Editar evento' : 'Nuevo evento'} </h1>
     <hr />
     <form className="container" onSubmit={handleSubmitForm}>
 

@@ -8,4 +8,5 @@
         eventAddNew: '[event]  Add new ',
         eventClearActveEvent: '[event] Clear event',
         eventUpdate: '[event] Event updated',
+        eventDeleted: '[event] Event deleted'
     }

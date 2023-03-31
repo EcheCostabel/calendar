@@ -77,3 +77,10 @@ html, body {
     position: fixed;
     right: 1.5rem;
 }   
+
+.fab-danger{
+    bottom: 2rem;
+    padding: 1rem;
+    position: fixed;
+    left: 1.5rem;
+}   

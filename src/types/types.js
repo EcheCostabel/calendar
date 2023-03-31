@@ -6,5 +6,6 @@
 
         eventSetActive: '[event]  Set active ',
         eventAddNew: '[event]  Add new ',
-        eventClearActveEvent: '[event] Clear event'
+        eventClearActveEvent: '[event] Clear event',
+        eventUpdate: '[event] Event updated',
     }

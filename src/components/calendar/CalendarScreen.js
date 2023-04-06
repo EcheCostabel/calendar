@@ -19,8 +19,6 @@ const localizer = momentLocalizer(moment); // or globalizeLocalizer
 
 
 
-
-
 export const CalendarScreen = () => {
   
   const dispatch = useDispatch();

@@ -60,8 +60,7 @@ export const startChecking = () => {
 
         const resp = await fetchWithToken('auth/renew');
         const body = await resp.json();
-        console.log(body)
-        
+     
 
         if(body.ok) {
             localStorage.setItem('token', body.token);  //si el usuario ingresa me va a guardar el 'token' que esta en body.token
@@ -72,7 +71,6 @@ export const startChecking = () => {
                 name: body.name
             }))
         } else {
-            Swal.fire('Error', body.msg, 'error')
             dispatch(checkingFinish())
         }
     }

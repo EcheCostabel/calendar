@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-import { fetchWithoutToken } from "../helpers/fetch";
+import { fetchWithToken, fetchWithoutToken } from "../helpers/fetch";
 import { types } from "../types/types";
 
 
@@ -50,5 +50,36 @@ export const startRegister = (email, password, name) => {
         } else {
             Swal.fire('Error', body.msg, 'error')
         }
+    }
+};
+
+
+
+export const startChecking = () => {
+    return async(dispatch) => {
+
+        const resp = await fetchWithToken('auth/renew');
+        const body = await resp.json();
+        console.log(body)
+        
+
+        if(body.ok) {
+            localStorage.setItem('token', body.token);  //si el usuario ingresa me va a guardar el 'token' que esta en body.token
+            localStorage.setItem('token-init-date', new Date().getTime());
+
+            dispatch(login({
+                uid: body.uid,
+                name: body.name
+            }))
+        } else {
+            Swal.fire('Error', body.msg, 'error')
+            dispatch(checkingFinish())
+        }
+    }
+}
+
+const checkingFinish = () => {
+    return {
+        type: types.authCheckingFinish
     }
 }

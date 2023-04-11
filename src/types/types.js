@@ -11,6 +11,7 @@
         eventClearActveEvent: '[event] Clear event',
         eventUpdate: '[event] Event updated',
         eventDeleted: '[event] Event deleted',
+        eventLoaded: '[event] Events loaded',
 
 
         authChecking: '[auth] Checking login state',

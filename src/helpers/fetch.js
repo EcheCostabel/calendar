@@ -34,6 +34,7 @@ export const fetchWithToken = ( endpoint, data, method = 'GET' ) => {
             }
         })
     } else {
+    
         return fetch(url, {
             method,
             headers: {

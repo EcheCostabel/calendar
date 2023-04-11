@@ -74,10 +74,26 @@ export const startChecking = () => {
             dispatch(checkingFinish())
         }
     }
-}
+};
 
 const checkingFinish = () => {
     return {
         type: types.authCheckingFinish
     }
-}
+};
+
+  
+export const startLogut = () => {
+    return (dispatch) => {
+
+        localStorage.clear();
+        dispatch(logout())
+
+    }
+};
+
+const logout = () => {
+    return {
+        type: types.authLogout
+    }
+};

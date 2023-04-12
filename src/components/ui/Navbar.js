@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLogut } from '../../actions/auth';
+import { eventLogout } from '../../actions/events';
 
 export const Navbar = () => {
 
@@ -9,6 +10,7 @@ export const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(startLogut());
+   
   }
 
   return (

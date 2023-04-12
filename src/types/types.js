@@ -6,6 +6,7 @@
 
         
         eventSetActive: '[event]  Set active ',
+        eventLogout: '[event] Clear events',
         eventStartAddNew:  '[event] Start add new',
         eventAddNew: '[event]  Add new ',
         eventClearActveEvent: '[event] Clear event',

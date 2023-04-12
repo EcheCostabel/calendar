@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLogut } from '../../actions/auth';
-import { eventLogout } from '../../actions/events';
 
 export const Navbar = () => {
 
@@ -14,7 +13,7 @@ export const Navbar = () => {
   }
 
   return (
-    <div className='navbar navbar-dark bg-dark mb-4'>
+    <div className='navbar navbar-dark bg-dark mb-4 px-3'>
         <span className='navbar-brand'>{name}</span>
 
         <button className='btn btn-outline-danger' onClick={handleLogout}>

@@ -33,6 +33,7 @@ export const fetchWithToken = ( endpoint, data, method = 'GET' ) => {
                 'x-token': token
             }
         })
+        
     } else {
     
         return fetch(url, {

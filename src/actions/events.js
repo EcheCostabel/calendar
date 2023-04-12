@@ -1,4 +1,5 @@
 import { fetchWithToken } from "../helpers/fetch";
+import { prepareEvents } from "../helpers/prepareEvents";
 import { types } from "../types/types"
 
 
@@ -73,9 +74,9 @@ export const eventStartLoading = () => {
             const resp = await fetchWithToken('events');
             const body = await resp.json();
 
-            const events = body.events;
-            console.log(events)
-            // dispatch(eventLoaded(events))
+            const events = prepareEvents(body.events);
+           
+            dispatch(eventLoaded(events))
         } catch (error) {
             console.log(error)
         }

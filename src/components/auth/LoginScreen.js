@@ -48,6 +48,8 @@ export const LoginScreen = () => {
 
 
     return (
+        <div className='maxContainer '>
+
         <div className="container login-container">
             <div className="row">
                 <div className="col-md-6 login-form-1">
@@ -61,7 +63,7 @@ export const LoginScreen = () => {
                                 name='lEmail'
                                 value={lEmail}
                                 onChange={handleLoginInputChange}
-                            />
+                                />
                         </div>
                         <div className="form-group mb-2">
                             <input
@@ -71,14 +73,14 @@ export const LoginScreen = () => {
                                 name='lPassword'
                                 value={lPassword}
                                 onChange={handleLoginInputChange}
-                            />
+                                />
                         </div>
                         <div className="form-group mb-2">
                             <input 
                                 type="submit"
                                 className="btnSubmit"
                                 value="Login" 
-                            />
+                                />
                         </div>
                     </form>
                 </div>
@@ -94,7 +96,7 @@ export const LoginScreen = () => {
                                 name='rName'
                                 value={rName}
                                 onChange={handleRegisterInputChange}
-                            />
+                                />
                         </div>
                         <div className="form-group mb-2">
                             <input
@@ -104,7 +106,7 @@ export const LoginScreen = () => {
                                 name='rEmail'
                                 value={rEmail}
                                 onChange={handleRegisterInputChange}
-                            />
+                                />
                         </div>
                         <div className="form-group mb-2">
                             <input
@@ -114,7 +116,7 @@ export const LoginScreen = () => {
                                 name='rPassword1'
                                 value={rPassword1}
                                 onChange={handleRegisterInputChange}
-                            />
+                                />
                         </div>
 
                         <div className="form-group mb-2">
@@ -125,7 +127,7 @@ export const LoginScreen = () => {
                                 name='rPassword2'
                                 value={rPassword2}
                                 onChange={handleRegisterInputChange}
-                            />
+                                />
                         </div>
 
                         <div className="form-group mb-2">
@@ -138,5 +140,6 @@ export const LoginScreen = () => {
                 </div>
             </div>
         </div>
+                                </div>
     )
 }

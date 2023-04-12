@@ -1,6 +1,6 @@
-.login-container{
+/* .login-container{
     margin-top: 15%;
-}
+} */
 .login-form-1{
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
@@ -48,4 +48,10 @@
     color: #0062cc;
     font-weight: 600;
     text-decoration: none;
+}
+
+.maxContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
